@@ -47,6 +47,8 @@ module DynamicCursesInput
       case chk
       when Curses::KEY_LEFT then handle_left_key # Move cursor left
       when Curses::KEY_RIGHT then handle_right_key # Move cursor right
+      when Curses::KEY_UP then handle_up_key
+      when Curses::KEY_DOWN then handle_down_key
       when Curses::KEY_BACKSPACE, 127 then handle_backspace_key # Delete character
       when 10, 13 then handle_enter_key # Break loop if enter key is pressed
       else handle_default_key(chk) # Add character to input string
@@ -61,6 +63,16 @@ module DynamicCursesInput
     # Move cursor right
     def handle_right_key
       @cursor_pos = CursorMover.right(@cursor_pos, @input.length)
+    end
+
+    # Move cursor down
+    def handle_down_key
+      @cursor_pos = CursorMover.down(@cursor_pos, @input.length)
+    end
+
+    # Move cursor up
+    def handle_up_key
+      @cursor_pos = CursorMover.up(@cursor_pos, @input.length)
     end
 
     # Delete character
@@ -103,8 +115,18 @@ module DynamicCursesInput
       cursor_pos == length ? cursor_pos : cursor_pos + 1
     end
 
+    # Handle down arrow key
+    def self.down(_, length)
+      length # Move to the end of the line
+    end
+
+    # Handle up arrow key
+    def self.up(_, _length)
+      0 # Move to the beginning of the line (position 0)
+    end
+
     # Set cursor position
-    def self.set_position(y, x)
+    def self.set_position(y, x) # rubocop:disable Naming/MethodParameterName
       Curses.setpos(y, x)
     end
   end

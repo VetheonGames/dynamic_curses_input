@@ -5,8 +5,8 @@ require_relative 'lib/dynamic_curses_input/version'
 Gem::Specification.new do |spec|
   spec.name = 'dynamic_curses_input'
   spec.version = DynamicCursesInput::VERSION
-  spec.authors = ['VetheonGames']
-  spec.email = ['vetheon@pixelatedstudios.net']
+  spec.authors = ['PixelRidge-Softworks']
+  spec.email = ['connorc@pixelridgesoftworks.com']
 
   spec.summary = 'A simple library for making Curses TUI input more dynamic and user-friendly'
   spec.description = "Dynamic Curses Input is a highly simple, yet powerful gem that allows simple implementation of
@@ -16,17 +16,22 @@ Gem::Specification.new do |spec|
                       that code, by providing simple to use methods that allow developers to capture user input, while
                       allowing the special keys to work as the average user would expect.
                       IE: When you press the left arrow key, the cursor moves to the left and allows you to delete a
-                      character you entered that isn't the last character you entered."
-  spec.homepage = 'https://github.com/Pixelated-Studios/dynamic_curses_input'
+                      character you entered that isn't the last character you entered.
+
+                      KNOWN BUG: X & Y coords for placing windows appear to be broken right now. Will fix with
+                      next update"
+  spec.homepage = 'https://git.pixelridgesoftworks.com/PixelRidge-Softworks/dynamic_curses_input'
   spec.license = 'MIT'
   spec.required_ruby_version = '3.2.2'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/Pixelated-Studios/dynamic_curses_input'
-  spec.metadata['changelog_uri'] = 'https://github.com/Pixelated-Studios/dynamic_curses_input/blob/main/CHANGELOG.md'
+  spec.metadata['source_code_uri'] = 'https://git.pixelridgesoftworks.com/PixelRidge-Softworks/dynamic_curses_input'
+  spec.metadata['changelog_uri'] = 'https://git.pixelridgesoftworks.com/PixelRidge-Softworks/dynamic_curses_input/src/branch/main/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.
-  spec.files = Dir.glob('{bin,lib,sig}/**/*') + Dir.glob('*').reject { |f| f.start_with?('spec', '.rspec', 'dynamic_curses_input.gemspec') }
+  spec.files = Dir.glob('{bin,lib,sig}/**/*') + Dir.glob('*').reject do |f|
+                                                  f.start_with?('spec', '.rspec', 'dynamic_curses_input.gemspec')
+                                                end
   spec.files << 'LICENSE.txt'
   spec.files << 'README.md'
   spec.files << 'dynamic_curses_input.gemspec'

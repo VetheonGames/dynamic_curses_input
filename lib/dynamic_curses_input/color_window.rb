@@ -9,7 +9,7 @@ module DynamicCursesInput
   # Class for creating a colored window
   class ColorWindow
     # Initialize instance variables and setup curses
-    def initialize(echo, x, y)
+    def initialize(echo, x, y) # rubocop:disable Metrics/MethodLength, Naming/MethodParameterName
       @echo = echo # Determines whether input should be echoed to the screen
       setup_curses_color # Setup curses
       @x = x
@@ -26,7 +26,7 @@ module DynamicCursesInput
     end
 
     # Method that adds colored text to the window
-    def add_color_window(color, text, x, y, input: nil, echo: true)
+    def add_color_window(color, text, x, y, input: nil, echo: true) # rubocop:disable Metrics/MethodLength, Metrics/ParameterLists, Naming/MethodParameterName
       # Map color names to color pair numbers
       color_map = {
         'black' => 1,
@@ -70,7 +70,7 @@ module DynamicCursesInput
     end
 
     # Set cursor position manually on the X and Y axis
-    def set_position(y, x)
+    def set_position(y, x) # rubocop:disable Naming/MethodParameterName
       Curses.setpos(y, x)
     end
   end

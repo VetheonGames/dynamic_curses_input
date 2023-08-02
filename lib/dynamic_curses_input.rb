@@ -15,12 +15,12 @@ module DynamicCursesInput
     InputHandler.catch_input(echo)
   end
 
-  def self.ask_question(color = 'white', question, x: 'center', input: true, echo: nil)
+  def self.ask_question(color = 'white', question, x: 'center', input: true, echo: nil) # rubocop:disable Naming/MethodParameterName
     Curses.clear
     ColorWindow.add_color_window(color, question, y:, x:, input:, echo:)
   end
 
-  def self.print_color_window(color, text, y_value: nil, x: 'center', input: nil, echo: true)
+  def self.print_color_window(color, text, y_value: nil, x: 'center', input: nil, echo: true) # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/ParameterLists, Naming/MethodParameterName
     case x
     when 'center'
       terminal_size = `stty size`.split.map(&:to_i)
@@ -59,7 +59,7 @@ module DynamicCursesInput
   class << self
     private
 
-    def process_print_color_window_args(args)
+    def process_print_color_window_args(args) # rubocop:disable Metrics/MethodLength
       case args.size
       when 2
         ['white', args[0], args[1], 'center', nil, true]
