@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = 'A simple library for making Curses TUI input more dynamic and user-friendly'
   spec.description = "Dynamic Curses Input is a highly simple, yet powerful gem that allows simple implementation of
                       dynamic typing in curses TUI menus built in Ruby. For example, one can't simply use their arrow
-                      keys to navigate and edit inputs in Cursese TUI menus without adding a bunch of extra code to your
+                      keys to navigate and edit inputs in Curses TUI menus without adding a bunch of extra code to your
                       project to handle it. A lot of which can be tricky to handle. This gem eliminates the need for
                       that code, by providing simple to use methods that allow developers to capture user input, while
                       allowing the special keys to work as the average user would expect.
