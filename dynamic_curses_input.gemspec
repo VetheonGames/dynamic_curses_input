@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir.glob('{bin,lib,sig}/**/*') + Dir.glob('*').reject do |f|
                                                   f.start_with?('spec', '.rspec', 'dynamic_curses_input.gemspec')
                                                 end
-  spec.files << 'LICENSE.txt'
+  spec.files << 'LICENSE'
   spec.files << 'README.md'
   spec.files << 'dynamic_curses_input.gemspec'
 
