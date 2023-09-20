@@ -11,3 +11,4 @@
 .rspec_status
 buildgem.sh
 Gemfile.lock
+*.gem

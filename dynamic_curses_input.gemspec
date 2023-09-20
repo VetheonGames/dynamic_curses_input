@@ -5,8 +5,8 @@ require_relative 'lib/dynamic_curses_input/version'
 Gem::Specification.new do |spec|
   spec.name = 'dynamic_curses_input'
   spec.version = DynamicCursesInput::VERSION
-  spec.authors = ['PixelRidge-Softworks']
-  spec.email = ['connorc@pixelridgesoftworks.com']
+  spec.authors = ['PixelRidge Softworks']
+  spec.email = ['ceo@pixelridgesoftworks.com']
 
   spec.summary = 'A simple library for making Curses TUI input more dynamic and user-friendly'
   spec.description = "Dynamic Curses Input is a highly simple, yet powerful gem that allows simple implementation of
@@ -19,9 +19,9 @@ Gem::Specification.new do |spec|
                       character you entered that isn't the last character you entered.
 
                       KNOWN BUG: X & Y coords for placing windows appear to be broken right now. Will fix with
-                      next update"
+                      next real update"
   spec.homepage = 'https://git.pixelridgesoftworks.com/PixelRidge-Softworks/dynamic_curses_input'
-  spec.license = 'MIT'
+  spec.license = 'PixelRidge-BEGPULSE'
   spec.required_ruby_version = '3.2.2'
 
   spec.metadata['homepage_uri'] = spec.homepage
@@ -41,4 +41,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'curses'
   spec.add_dependency 'reline'
   spec.add_development_dependency 'rubocop'
+  spec.post_install_message = 'If you find this gem useful, consider supporting its development: https://www.paypal.com/donate/?hosted_button_id=YF5XS7ZXQ6F8A'
 end

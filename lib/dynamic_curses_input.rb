@@ -11,6 +11,7 @@ require_relative 'dynamic_curses_input/color_window'
 module DynamicCursesInput
   class Error < StandardError; end
 
+  # Whether or not to output the user entered text to STDOUT
   def self.catch_input(echo)
     InputHandler.catch_input(echo)
   end
