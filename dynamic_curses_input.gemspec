@@ -10,16 +10,11 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'A simple library for making Curses TUI input more dynamic and user-friendly'
   spec.description = "Dynamic Curses Input is a highly simple, yet powerful gem that allows simple implementation of
-                      dynamic typing in curses TUI menus built in Ruby. For example, one can't simply use their arrow
-                      keys to navigate and edit inputs in Curses TUI menus without adding a bunch of extra code to your
-                      project to handle it. A lot of which can be tricky to handle. This gem eliminates the need for
-                      that code, by providing simple to use methods that allow developers to capture user input, while
-                      allowing the special keys to work as the average user would expect.
-                      IE: When you press the left arrow key, the cursor moves to the left and allows you to delete a
-                      character you entered that isn't the last character you entered.
+                      dynamic typing in curses TUI menus built in Ruby. It allows for the use of special keys inside
+                      of Curses TUI menus without the need for a bunch of extra code.
 
                       KNOWN BUG: X & Y coords for placing windows appear to be broken right now. Will fix with
-                      next real update"
+                      next real update, just use the preset window locations for now please!"
   spec.homepage = 'https://git.pixelridgesoftworks.com/PixelRidge-Softworks/dynamic_curses_input'
   spec.license = 'PixelRidge-BEGPULSE'
   spec.required_ruby_version = '3.2.2'
