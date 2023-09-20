@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dynamic_curses_input (1.2.1)
+    dynamic_curses_input (1.2.2)
       curses
       reline
 
@@ -20,7 +20,6 @@ GEM
       racc
     racc (1.7.1)
     rainbow (3.1.1)
-    rake (13.0.6)
     regexp_parser (2.8.1)
     reline (0.3.8)
       io-console (~> 0.5)
@@ -46,11 +45,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  curses
+  curses (~> 1.4)
   dynamic_curses_input!
-  rake
-  reline
-  rubocop
+  reline (~> 0.3.8)
+  rubocop (~> 1.56)
 
 BUNDLED WITH
    2.4.10

@@ -33,8 +33,8 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'curses'
-  spec.add_dependency 'reline'
-  spec.add_development_dependency 'rubocop'
+  spec.add_dependency 'curses', '~> 1.4'
+  spec.add_dependency 'reline', '~> 0.3.8'
+  spec.add_development_dependency 'rubocop', '~> 1.56'
   spec.post_install_message = 'If you find this gem useful, consider supporting its development: https://www.paypal.com/donate/?hosted_button_id=YF5XS7ZXQ6F8A'
 end

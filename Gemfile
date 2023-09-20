@@ -5,10 +5,8 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in dynamic_curses_input.gemspec
 gemspec
 
-gem 'rake'
+gem 'reline', '~> 0.3.8'
 
-gem 'rubocop'
+gem 'curses', '~> 1.4'
 
-gem 'curses'
-
-gem 'reline'
+gem 'rubocop', '~> 1.56'
