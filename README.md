@@ -2,6 +2,8 @@
 
 DynamicCursesInput is a Ruby gem that provides a simple and intuitive way to handle user input in a Curses-based terminal user interface (TUI). It allows for dynamic input handling, including cursor movement and inline character addition and deletion.
 
+If you need more direct help, join our [Discord](https://discord.gg/SQeWBWS8v4)
+
 ## Table of Contents
 
 - [Installation](#installation)
